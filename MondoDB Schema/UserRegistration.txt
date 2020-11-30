@@ -1,0 +1,149 @@
+//UserRegistrationSchema
+
+//**Person Info
+private String firstName;
+private String lastName;
+private Gender gender;
+private ZonedDateTime dob;
+private String occupation;
+private String phoneNumber;
+private String aadharNumber;
+private String panNumber;
+
+//*** Address Line
+private String addressLine1;
+private String district;
+private String city;
+private String state;
+private String pin;
+
+ //**Person Info
+  firstName: {
+    type: String,
+    required: true,
+  },
+  lastName: {
+    type: String,
+    required: true,
+  },
+  gender: {
+    type: String,
+    required: true,
+  },
+
+  occupation: {
+    type: String,
+    required: true,
+  },
+  phoneNumber: {
+    type: String,
+    required: true,
+  },
+  aadharNumber: {
+    type: String,
+    required: false,
+  },
+  panNumber: {
+    type: String,
+    required: false,
+  },
+  email: {
+    type: String,
+    required: false,
+  },
+  password: 
+{
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+  },
+
+  avatar: {
+    type: String,
+  },
+  //*** Address Line
+  address: {
+    type: String,
+    required: true,
+  },
+  district: {
+    type: String,
+    required: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  state: {
+    type: String,
+    required: true,
+  },
+  pin: {
+    type: Number,
+    required: true,
+  },
+  referenceName: {
+    type: String,
+  },
+  referenceAddress: {
+    type: String,
+  },
+
+
+
+
+if (!validator.isLength(user.lastName, { min: 2, max: 30 })) {
+    errors.name = "lastName must be between 2 and 30 characters";
+  }
+  if (!validator.isLength(user.gender, { min: 1, max: 10 })) {
+    errors.name = "Gender must be between 2 and 30 characters";
+  }
+  if (!validator.isLength(user.occupation, { min: 2, max: 30 })) {
+    errors.name = "Occupation must be between 2 and 30 characters";
+  }
+  if (!validator.isLength(user.phoneNumber, { max: 30 })) {
+    errors.name = "FirstName must be between 2 and 30 characters";
+  }
+  if (!validator.isLength(user.firstName, { min: 2, max: 30 })) {
+    errors.name = "FirstName must be between 2 and 30 characters";
+  }
+
+******* OTP need to send during login 
+
+Edit Profile
+	handle* unique handle Name
+	status* Give us idea where are you in your career******** Manager, Farmar,Seller,Buyer Business
+	company***If you are farmer please enter villageName if not please mention company Name,NGOS
+	location::Address
+*skill	productList*** which product do you want sell or buy in future please mentation one or more 
+	bio***tell us little about yourself
+	websites** if you are using social media please share link
+
+*experience: 	**Add time period you want to sell or buy the product **Current Need> ProductName>Quantity>?Interest>Date
+	*product name
+	*sell or buy *interest sell or buy
+	*Address Location
+	*Quantity
+	*Expected price 
+	*from Date
+	*to Date
+	**Remark
+ productName: { type: String, required: true }, 
+      status: { type: String, required: true }, 
+      address: { type: String, required: true },
+      quantity: { type: String, required: true },
+      expectedPrice: { type: String },
+      fromDate: { type: Date, required: true },
+      toDate: { type: Date, required: true },
+      remark: { type: String },
+
+	**Add upcoming grains you want to sell or buy ***upcoming Need  >ProductName>Quantity>Time Period
+	*upcoming product
+	*expected Quantity
+	*Address
+	**from date
+	*preparation date
+

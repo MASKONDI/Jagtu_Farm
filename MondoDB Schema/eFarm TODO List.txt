@@ -1,0 +1,6 @@
+TODO task: 
+	**create Backend Properly
+	**create Frontend Properly
+	**check web Hosting
+	**check DataBase (cloud service) how to store data on cloud
+	**learn spring Boot properly
